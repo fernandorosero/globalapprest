@@ -1,7 +1,5 @@
 package com.onetec.globalapp.model;
 
-import javax.persistence.Column;
-
 public class EmpresaModel {
 
 	

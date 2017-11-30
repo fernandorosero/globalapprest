@@ -2,11 +2,16 @@ package com.onetec.globalapp.service;
 
 import java.util.List;
 
+import com.onetec.globalapp.model.CategoriaModel;
+import com.onetec.globalapp.model.ClienteModel;
+import com.onetec.globalapp.model.CompromisoModel;
 import com.onetec.globalapp.model.EmpleadoModel;
+import com.onetec.globalapp.model.EmpresaModel;
 
 public interface EmpleadoService {
 
-	public abstract EmpleadoModel agregarEmpleado(EmpleadoModel empleadoModel);
+	public abstract EmpleadoModel agregarEmpleado(EmpleadoModel empleadoModel, EmpresaModel empresaModel, 
+			CategoriaModel categoriaModel, CompromisoModel compromisoModel, ClienteModel clienteModel);
 	
 	public abstract EmpleadoModel buscarEmpleadoPorId(int id);
 	

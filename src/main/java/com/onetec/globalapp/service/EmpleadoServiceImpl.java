@@ -9,7 +9,11 @@ import org.springframework.stereotype.Service;
 
 import com.onetec.globalapp.converter.EmpleadoConverter;
 import com.onetec.globalapp.entity.Empleado;
+import com.onetec.globalapp.model.CategoriaModel;
+import com.onetec.globalapp.model.ClienteModel;
+import com.onetec.globalapp.model.CompromisoModel;
 import com.onetec.globalapp.model.EmpleadoModel;
+import com.onetec.globalapp.model.EmpresaModel;
 import com.onetec.globalapp.repository.EmpleadoRepository;
 
 @Service("empleadoServiceImpl")
@@ -24,7 +28,8 @@ public class EmpleadoServiceImpl implements EmpleadoService{
 	private EmpleadoConverter empleadoConverter;
 	
 	@Override
-	public EmpleadoModel agregarEmpleado(EmpleadoModel empleadoModel) {
+	public EmpleadoModel agregarEmpleado(EmpleadoModel empleadoModel, EmpresaModel empresaModel, 
+			CategoriaModel categoriaModel, CompromisoModel compromisoModel, ClienteModel clienteModel) {
 		
 		Empleado empleado = empleadoRepository.save(empleadoConverter.converterEmpleadoModelAEmpleado(empleadoModel));
 		
