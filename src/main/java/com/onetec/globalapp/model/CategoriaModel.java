@@ -1,6 +1,6 @@
 package com.onetec.globalapp.model;
 
-public class Categoria {
+public class CategoriaModel {
 
 	private int id;
 	private String descripcion;
@@ -18,12 +18,12 @@ public class Categoria {
 		this.descripcion = descripcion;
 	}
 	
-	public Categoria(int id, String descripcion) {
+	public CategoriaModel(int id, String descripcion) {
 		super();
 		this.id = id;
 		this.descripcion = descripcion;
 	}
-	public Categoria() {
+	public CategoriaModel() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
