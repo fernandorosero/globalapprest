@@ -23,7 +23,7 @@ public class EmpleadoConverter {
 		empleado.setNombre(empleadoModel.getNombre());
 		empleado.setApellido1(empleadoModel.getApellido1());
 		empleado.setApellido2(empleadoModel.getApellido2());
-		empleado.setDni(empleadoModel.getDni());
+		empleado.setNif(empleadoModel.getNif());
 		empleado.setSexo(empleadoModel.getSexo());
 		empleado.setCv(empleadoModel.getCv());
 		empleado.setPaisNacimiento(empleadoModel.getPaisNacimiento());
@@ -56,7 +56,7 @@ public class EmpleadoConverter {
 		empleadoModel.setNombre(empleado.getNombre());
 		empleadoModel.setApellido1(empleado.getApellido1());
 		empleadoModel.setApellido2(empleado.getApellido2());
-		empleadoModel.setDni(empleado.getDni());
+		empleadoModel.setNif(empleado.getNif());
 		empleadoModel.setSexo(empleado.getSexo());
 		empleadoModel.setCv(empleado.getCv());
 		empleadoModel.setPaisNacimiento(empleado.getPaisNacimiento());

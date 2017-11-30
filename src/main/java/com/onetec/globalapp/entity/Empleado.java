@@ -27,8 +27,8 @@ public class Empleado {
 	@Column(name="apellido2", length = 40, nullable = false)
 	private String apellido2;
 	
-	@Column(name="dni", length = 10, nullable = false)
-	private String dni;
+	@Column(name="nif", length = 10, nullable = false)
+	private String nif;
 	
 	@Column(name="sexo", length = 10, nullable = false)
 	private String sexo;
@@ -100,12 +100,12 @@ public class Empleado {
 		this.apellido2 = apellido2;
 	}
 
-	public String getDni() {
-		return dni;
+	public String getNif() {
+		return nif;
 	}
 
-	public void setDni(String dni) {
-		this.dni = dni;
+	public void setNif(String nif) {
+		this.nif = nif;
 	}
 
 	public String getSexo() {
@@ -204,7 +204,7 @@ public class Empleado {
 		this.provincia = provincia;
 	}
 
-	public Empleado(int id, String nombre, String apellido1, String apellido2, String dni, String sexo, String cv,
+	public Empleado(int id, String nombre, String apellido1, String apellido2, String nif, String sexo, String cv,
 			String paisNacimiento, String provinciaNacimiento, Date fechaNacimiento, String titulacion,
 			String correoPersonal, String telefonoPersonal, String direccion, String localidad, String codigoPostal,
 			String provincia) {
@@ -213,7 +213,7 @@ public class Empleado {
 		this.nombre = nombre;
 		this.apellido1 = apellido1;
 		this.apellido2 = apellido2;
-		this.dni = dni;
+		this.nif = nif;
 		this.sexo = sexo;
 		this.cv = cv;
 		this.paisNacimiento = paisNacimiento;

@@ -40,7 +40,7 @@ public class EmpleadoServiceImpl implements EmpleadoService{
 
 	@Override
 	public EmpleadoModel actualizarEmpleadoPorId(int id) {
-		// TODO Auto-generated method stub
+		//Empleado empleado =  empleadoRepository.
 		return null;
 	}
 

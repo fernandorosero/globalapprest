@@ -22,6 +22,9 @@ public class HistoricoEmpleadoEmpresa {
 	
 	@Column(name = "idEmpleado", nullable = false)
 	private int idEmpleado;
+
+	@Column(name = "idCategoria", nullable = false)
+	private int idCategoria;
 	
 	@Column(name = "fechaAlta", nullable = false)
 	private Date fechaAlta;
@@ -34,9 +37,6 @@ public class HistoricoEmpleadoEmpresa {
 	
 	@Column(name = "fechaContrato", nullable = false)
 	private Date fechaContrato;
-	
-	@Column(name = "categoria", length = 20, nullable = false)
-	private String categoria;
 	
 	@Column(name = "fechaCategoria", nullable = false)
 	private Date fechaCategoria;
@@ -82,6 +82,15 @@ public class HistoricoEmpleadoEmpresa {
 	public void setIdEmpleado(int idEmpleado) {
 		this.idEmpleado = idEmpleado;
 	}
+	
+	public int getIdCategoria() {
+		return idCategoria;
+	}
+
+
+	public void setIdCategoria(int idCategoria) {
+		this.idCategoria = idCategoria;
+	}
 
 
 	public Date getFechaAlta() {
@@ -124,14 +133,7 @@ public class HistoricoEmpleadoEmpresa {
 	}
 
 
-	public String getCategoria() {
-		return categoria;
-	}
-
-
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
-	}
+	
 
 
 	public Date getFechaCategoria() {
@@ -183,25 +185,25 @@ public class HistoricoEmpleadoEmpresa {
 		this.telefonoEmpresa = telefonoEmpresa;
 	}
 
-
-	public HistoricoEmpleadoEmpresa(int id, int idEmpresa, int idEmpleado, Date fechaAlta, Date fechaBaja,
-			String contrato, Date fechaContrato, String categoria, Date fechaCategoria, String salario,
-			Date fechaSalario, String correoEmpresa, String telefonoEmpresa) {
+	public HistoricoEmpleadoEmpresa(int id, int idEmpresa, int idEmpleado, int idCategoria, Date fechaAlta,
+			Date fechaBaja, String contrato, Date fechaContrato, Date fechaCategoria, String salario, Date fechaSalario,
+			String correoEmpresa, String telefonoEmpresa) {
 		super();
 		this.id = id;
 		this.idEmpresa = idEmpresa;
 		this.idEmpleado = idEmpleado;
+		this.idCategoria = idCategoria;
 		this.fechaAlta = fechaAlta;
 		this.fechaBaja = fechaBaja;
 		this.contrato = contrato;
 		this.fechaContrato = fechaContrato;
-		this.categoria = categoria;
 		this.fechaCategoria = fechaCategoria;
 		this.salario = salario;
 		this.fechaSalario = fechaSalario;
 		this.correoEmpresa = correoEmpresa;
 		this.telefonoEmpresa = telefonoEmpresa;
 	}
+
 
 	public HistoricoEmpleadoEmpresa () {}
 

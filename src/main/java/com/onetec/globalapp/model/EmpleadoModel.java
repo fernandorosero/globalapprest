@@ -9,7 +9,7 @@ public class EmpleadoModel {
 	private String nombre;
 	private String apellido1;
 	private String apellido2;
-	private String dni;
+	private String nif;
 	private String sexo;
 	private String cv;
 	private String paisNacimiento;
@@ -47,11 +47,11 @@ public class EmpleadoModel {
 	public void setApellido2(String apellido2) {
 		this.apellido2 = apellido2;
 	}
-	public String getDni() {
-		return dni;
+	public String getNif() {
+		return nif;
 	}
-	public void setDni(String dni) {
-		this.dni = dni;
+	public void setNif(String nif) {
+		this.nif = nif;
 	}
 	public String getSexo() {
 		return sexo;
@@ -125,7 +125,7 @@ public class EmpleadoModel {
 	public void setProvincia(String provincia) {
 		this.provincia = provincia;
 	}
-	public EmpleadoModel(int id, String nombre, String apellido1, String apellido2, String dni, String sexo, String cv,
+	public EmpleadoModel(int id, String nombre, String apellido1, String apellido2, String nif, String sexo, String cv,
 			String paisNacimiento, String provinciaNacimiento, Date fechaNacimiento, String titulacion,
 			String correoPersonal, String telefonoPersonal, String direccion, String localidad, String codigoPostal,
 			String provincia) {
@@ -134,7 +134,7 @@ public class EmpleadoModel {
 		this.nombre = nombre;
 		this.apellido1 = apellido1;
 		this.apellido2 = apellido2;
-		this.dni = dni;
+		this.nif = nif;
 		this.sexo = sexo;
 		this.cv = cv;
 		this.paisNacimiento = paisNacimiento;
@@ -154,7 +154,7 @@ public class EmpleadoModel {
 	@Override
 	public String toString() {
 		return "EmpleadoModel [id=" + id + ", nombre=" + nombre + ", apellido1=" + apellido1 + ", apellido2="
-				+ apellido2 + ", dni=" + dni + ", sexo=" + sexo + ", cv=" + cv + ", paisNacimiento=" + paisNacimiento
+				+ apellido2 + ", nif=" + nif + ", sexo=" + sexo + ", cv=" + cv + ", paisNacimiento=" + paisNacimiento
 				+ ", provinciaNacimiento=" + provinciaNacimiento + ", fechaNacimiento=" + fechaNacimiento
 				+ ", titulacion=" + titulacion + ", correoPersonal=" + correoPersonal + ", telefonoPersonal="
 				+ telefonoPersonal + ", direccion=" + direccion + ", localidad=" + localidad + ", codigoPostal="
