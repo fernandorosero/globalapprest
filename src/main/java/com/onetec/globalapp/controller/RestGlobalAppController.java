@@ -13,13 +13,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.onetec.globalapp.model.CategoriaModel;
 import com.onetec.globalapp.model.ClienteModel;
+import com.onetec.globalapp.model.CompromisoModel;
 import com.onetec.globalapp.model.EmpleadoModel;
 import com.onetec.globalapp.model.EmpresaModel;
+import com.onetec.globalapp.model.HistoricoEmpleadoClienteModel;
 import com.onetec.globalapp.model.HistoricoEmpleadoEmpresaModel;
 import com.onetec.globalapp.service.CategoriaService;
 import com.onetec.globalapp.service.ClienteService;
+import com.onetec.globalapp.service.CompromisoService;
 import com.onetec.globalapp.service.EmpleadoService;
 import com.onetec.globalapp.service.EmpresaService;
+import com.onetec.globalapp.service.HistoricoEmpleadoClienteService;
 import com.onetec.globalapp.service.HistoricoEmpleadoEmpresaService;
 
 @RestController
@@ -45,6 +49,14 @@ public class RestGlobalAppController {
 	@Autowired
 	@Qualifier("categoriaServiceImpl")
 	private CategoriaService categoriaService;
+	
+	@Autowired
+	@Qualifier("compromisoServiceImpl")
+	private CompromisoService compromisoService;
+	
+	@Autowired
+	@Qualifier("historicoEmpleadoClienteServiceImpl")
+	private HistoricoEmpleadoClienteService historicoEmpleadoClienteService;
 	
 	@GetMapping("/listadoEmpleados")
 	public ResponseEntity<List<EmpleadoModel>> listadoEmpleados() {
@@ -83,5 +95,19 @@ public class RestGlobalAppController {
 		
 		List<CategoriaModel> listadoCategorias = categoriaService.listadoCategoria();
 		return new ResponseEntity<List<CategoriaModel>>(listadoCategorias, HttpStatus.OK);
+	}
+	
+	@GetMapping("/listadoCompromisos")
+	public ResponseEntity<List<CompromisoModel>> listadoCompromisos() {
+		
+		List<CompromisoModel> listadoCompromisos = compromisoService.listadoCompromiso();
+		return new ResponseEntity<List<CompromisoModel>>(listadoCompromisos, HttpStatus.OK);
+	}
+	
+	@GetMapping("/listadoHistoricosEmpleadoClientes")
+	public ResponseEntity<List<HistoricoEmpleadoClienteModel>> listadoHistoricoEmpleadoCliente() {
+		
+		List<HistoricoEmpleadoClienteModel> listadoHistoricoEmpleadoCliente = historicoEmpleadoClienteService.listadoHistoricoEmpleadoCliente();
+		return new ResponseEntity<List<HistoricoEmpleadoClienteModel>>(listadoHistoricoEmpleadoCliente, HttpStatus.OK);
 	}
 }
