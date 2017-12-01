@@ -20,6 +20,7 @@ public class ClienteConverter {
 		Cliente cliente = new Cliente();
 		
 		cliente.setId(clienteModel.getId());
+		cliente.setCif(clienteModel.getCif());
 		cliente.setNombre(clienteModel.getNombre());
 		cliente.setTelefono(clienteModel.getTelefono());
 		cliente.setDireccion(clienteModel.getDireccion());
@@ -43,6 +44,7 @@ public class ClienteConverter {
 		ClienteModel clienteModel = new ClienteModel();
 		
 		clienteModel.setId(cliente.getId());
+		clienteModel.setCif(cliente.getCif());
 		clienteModel.setNombre(cliente.getNombre());
 		clienteModel.setTelefono(cliente.getTelefono());
 		clienteModel.setDireccion(cliente.getDireccion());

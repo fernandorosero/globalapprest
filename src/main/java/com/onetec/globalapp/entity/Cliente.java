@@ -15,6 +15,9 @@ public class Cliente {
 	@Column(name = "id", nullable = false)
 	private int id;
 	
+	@Column(name = "cif", nullable = false)
+	private int cif;
+	
 	@Column(name = "nombre", length = 30, nullable = false)
 	private String nombre;
 	
@@ -44,8 +47,16 @@ public class Cliente {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
+	public int getCif() {
+		return cif;
+	}
 
 
+	public void setCif(int cif) {
+		this.cif = cif;
+	}
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -115,11 +126,11 @@ public class Cliente {
 		this.provincia = provincia;
 	}
 
-
-	public Cliente(int id, String nombre, String telefono, String direccion, String localidad, String codigoPostal,
-			String pais, String provincia) {
+	public Cliente(int id, int cif, String nombre, String telefono, String direccion, String localidad,
+			String codigoPostal, String pais, String provincia) {
 		super();
 		this.id = id;
+		this.cif = cif;
 		this.nombre = nombre;
 		this.telefono = telefono;
 		this.direccion = direccion;

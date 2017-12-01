@@ -27,7 +27,7 @@ import com.onetec.globalapp.service.HistoricoEmpleadoEmpresaService;
 
 @RestController
 @RequestMapping("/get")
-public class RestGlobalAppController {
+public class GlobalAppRestController {
 
 	@Autowired
 	@Qualifier("empleadoServiceImpl")
