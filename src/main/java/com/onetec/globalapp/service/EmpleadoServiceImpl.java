@@ -19,6 +19,8 @@ import com.onetec.globalapp.repository.EmpleadoRepository;
 @Service("empleadoServiceImpl")
 public class EmpleadoServiceImpl implements EmpleadoService{
 
+	
+
 	@Autowired
 	@Qualifier("empleadoRepository")
 	private EmpleadoRepository empleadoRepository;
@@ -37,12 +39,17 @@ public class EmpleadoServiceImpl implements EmpleadoService{
 		
 	}
 
+	
 	@Override
-	public EmpleadoModel buscarEmpleadoPorId(int id) {
-		// TODO Auto-generated method stub
-		return null;
+	public Empleado buscarEmpleadoPorId(int id) {
+		return empleadoRepository.findById(id);
 	}
-
+	
+	@Override
+	public EmpleadoModel buscarEmpleadoPorIdPorModel(int id) {
+		return empleadoConverter.converterEmpleadoAEmpleadoModel(buscarEmpleadoPorId(id));
+	}
+	
 	@Override
 	public EmpleadoModel actualizarEmpleadoPorId(int id) {
 		//Empleado empleado =  empleadoRepository.

@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.onetec.globalapp.model.CategoriaModel;
@@ -109,4 +110,11 @@ public class GlobalAppRestController {
 		List<HistoricoEmpleadoClienteModel> listadoHistoricoEmpleadoCliente = historicoEmpleadoClienteService.listadoHistoricoEmpleadoCliente();
 		return new ResponseEntity<List<HistoricoEmpleadoClienteModel>>(listadoHistoricoEmpleadoCliente, HttpStatus.OK);
 	}
+	
+	@GetMapping("/empleado")
+	public ResponseEntity<EmpleadoModel> getEmpleado(@RequestParam (name = "id", required = true)int id) {
+		EmpleadoModel empleado = empleadoService.buscarEmpleadoPorIdPorModel(id);
+		return new ResponseEntity<EmpleadoModel>(empleado,HttpStatus.OK);
+	}
+	
 }

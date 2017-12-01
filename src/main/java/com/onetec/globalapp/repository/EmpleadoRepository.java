@@ -10,4 +10,6 @@ import com.onetec.globalapp.entity.Empleado;
 @Repository("empleadoRepository")
 public interface EmpleadoRepository extends JpaRepository<Empleado, Serializable> {
 
+	public abstract Empleado findById(int id);
+	
 }
