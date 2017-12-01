@@ -2,8 +2,8 @@ package com.onetec.globalapp.model;
 
 public class EmpresaModel {
 
-	
 	private int id;
+	private String cif;
 	private String nombre;
 	private String telefono;
 	private String direccion;
@@ -17,6 +17,12 @@ public class EmpresaModel {
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	public String getCif() {
+		return cif;
+	}
+	public void setCif(String cif) {
+		this.cif = cif;
 	}
 	public String getNombre() {
 		return nombre;
@@ -61,10 +67,11 @@ public class EmpresaModel {
 		this.provincia = provincia;
 	}
 	
-	public EmpresaModel(int id, String nombre, String telefono, String direccion, String localidad, String codigoPostal,
-			String pais, String provincia) {
+	public EmpresaModel(int id, String cif, String nombre, String telefono, String direccion, String localidad,
+			String codigoPostal, String pais, String provincia) {
 		super();
 		this.id = id;
+		this.cif = cif;
 		this.nombre = nombre;
 		this.telefono = telefono;
 		this.direccion = direccion;
@@ -79,9 +86,9 @@ public class EmpresaModel {
 	
 	@Override
 	public String toString() {
-		return "EmpresaModel [id=" + id + ", nombre=" + nombre + ", telefono=" + telefono + ", direccion=" + direccion
-				+ ", localidad=" + localidad + ", codigoPostal=" + codigoPostal + ", pais=" + pais + ", provincia="
-				+ provincia + "]";
+		return "EmpresaModel [id=" + id + ", cif=" + cif + ", nombre=" + nombre + ", telefono=" + telefono
+				+ ", direccion=" + direccion + ", localidad=" + localidad + ", codigoPostal=" + codigoPostal + ", pais="
+				+ pais + ", provincia=" + provincia + "]";
 	}
 	
 }

@@ -4,7 +4,6 @@ import java.util.Date;
 
 public class EmpleadoModel {
 
-	
 	private int id;
 	private String nombre;
 	private String apellido1;

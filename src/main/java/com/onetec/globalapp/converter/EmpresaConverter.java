@@ -20,6 +20,7 @@ public class EmpresaConverter {
 		Empresa empresa = new Empresa();
 		
 		empresa.setId(empresaModel.getId());
+		empresa.setCif(empresaModel.getCif());
 		empresa.setNombre(empresaModel.getNombre());
 		empresa.setTelefono(empresaModel.getTelefono());
 		empresa.setDireccion(empresaModel.getDireccion());
@@ -43,6 +44,7 @@ public class EmpresaConverter {
 		EmpresaModel empresaModel = new EmpresaModel();
 		
 		empresaModel.setId(empresa.getId());
+		empresaModel.setCif(empresa.getCif());
 		empresaModel.setNombre(empresa.getNombre());
 		empresaModel.setTelefono(empresa.getTelefono());
 		empresaModel.setDireccion(empresa.getDireccion());

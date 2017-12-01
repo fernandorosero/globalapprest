@@ -12,8 +12,11 @@ public class Empresa {
 
 	@Id
 	@GeneratedValue
-	@Column(name = "id",nullable = false)
+	@Column(name = "id", nullable = false)
 	private int id;
+	
+	@Column(name = "cif", nullable = false)
+	private String cif;
 	
 	@Column(name = "nombre", length = 30, nullable = false)
 	private String nombre;
@@ -46,7 +49,14 @@ public class Empresa {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
+	public String getCif() {
+		return cif;
+	}
 
+	public void setCif(String cif) {
+		this.cif = cif;
+	}
 
 	public String getNombre() {
 		return nombre;
@@ -117,11 +127,12 @@ public class Empresa {
 		this.provincia = provincia;
 	}
 
-
-	public Empresa(int id, String nombre, String telefono, String direccion, String localidad, String codigoPostal,
-			String pais, String provincia) {
+	
+	public Empresa(int id, String cif, String nombre, String telefono, String direccion, String localidad,
+			String codigoPostal, String pais, String provincia) {
 		super();
 		this.id = id;
+		this.cif = cif;
 		this.nombre = nombre;
 		this.telefono = telefono;
 		this.direccion = direccion;
@@ -130,6 +141,7 @@ public class Empresa {
 		this.pais = pais;
 		this.provincia = provincia;
 	}
+
 
 	public Empresa (){
 	}
